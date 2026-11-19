@@ -1,227 +1,246 @@
-\documentclass[10pt, a4paper]{article}
+\documentclass[10pt, letterpaper]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[margin=0.6in]{geometry}
+\usepackage[letterpaper,margin=0.5in]{geometry}
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{parskip}
 \usepackage{titlesec}
 \usepackage{array}
-\usepackage{fontawesome5}
-\usepackage{ragged2e}
-\usepackage{booktabs}
 \usepackage{charter}
-\usepackage{multicol}  
+\usepackage{fontawesome5}
+\usepackage{multicol}
 
-% Colors
 \definecolor{bluecolor}{RGB}{40, 80, 150}
-\definecolor{graycolor}{RGB}{100, 100, 100}
 
-% Formatting
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{2pt}
+\setlength{\parskip}{0pt}
 \usepackage{setspace}
-\setstretch{1.1} 
+\setstretch{1.07}
 \pagestyle{empty}
 
-% Section formatting
-\titleformat{\section}{\large\bfseries\color{bluecolor}}{}{0pt}{}
-\titlespacing{\section}{0pt}{6pt}{3pt}
+\titleformat{\section}{\normalsize\bfseries\color{bluecolor}}{}{0pt}{}
+\titlespacing{\section}{0pt}{5pt}{2pt}
 
-% Compact lists
-\setlist[itemize]{leftmargin=*, nosep, topsep=2pt, partopsep=0pt}
-\setlist[enumerate]{leftmargin=*, nosep, topsep=2pt, partopsep=0pt}
+\setlist[itemize]{leftmargin=*, nosep, topsep=0pt, partopsep=0pt}
+\setlist[enumerate]{leftmargin=*, nosep, topsep=0pt, partopsep=0pt}
 
-% Custom commands
-\newcommand{\contacticon}[1]{\raisebox{-0.2ex}{\faIcon{#1}}}
 \newcommand{\link}[2]{\href{#1}{\color{bluecolor}#2}}
-\newcommand{\datedentry}[2]{\textbf{#1} \hfill #2\\}
-\newcommand{\location}[1]{\textit{#1}}
+\newcommand{\certlink}[1]{\href{#1}{\color{bluecolor}\scriptsize\raisebox{-0.1ex}{\faIcon{link}}}}
+\newcommand{\ghlink}[1]{\href{#1}{\color{bluecolor}\faIcon{github}}}
+\newcommand{\urllink}[1]{\href{#1}{\color{bluecolor}\faIcon{link}}}
+\newcommand{\contacticon}[1]{\raisebox{-0.2ex}{\faIcon{#1}}}
 
 \begin{document}
-\fontsize{10}{13}\selectfont 
+\fontsize{9}{12}\selectfont
 
-% HEADER
+% ================= HEADER (full width) =================
 \begin{center}
-    {\Huge \textbf{Md Safwan Bin Rashid}} \\[6pt]
-    {\small 
-        \contacticon{map-marker-alt} 105 Ross Blvd, Apt C8, Hattiesburg, MS 39401 \quad 
-        \contacticon{mobile-alt} (601) 913-8400 \\[2pt]
-        \contacticon{envelope} \href{mailto:mdsafwanbin.rashid@usm.edu}{MdSafwanBin.Rashid@usm.edu} \quad 
-        \contacticon{linkedin} \href{http://www.linkedin.com/in/md-safwan-bin-rashid-887439249}{LinkedIn} \quad 
+    {\huge \textbf{Md Safwan Bin Rashid}} \\[10pt]
+    {\small
+        \contacticon{map-marker-alt} Hattiesburg, MS \quad
+        \contacticon{mobile-alt} (601) 913-8400 \quad
+        \contacticon{envelope} \href{mailto:mdsafwanbin.rashid@usm.edu}{MdSafwanBin.Rashid@usm.edu} \quad
+        \contacticon{linkedin} \href{http://www.linkedin.com/in/md-safwan-bin-rashid-887439249}{LinkedIn} \quad
         \contacticon{github} \href{https://github.com/MdSafwanBinRashid}{GitHub}
     }
 \end{center}
 
-\vspace{2pt}
+\vspace{8pt}
 
-% EDUCATION
-\section*{Education}\vspace{-2pt}\hrule\vspace{6pt}
-\textit{The University of Southern Mississippi} \hfill Aug 2024 -- May 2028\\
-\textbf{B.S. in Computer Science, Minor in Psychology} \hfill CGPA: 3.91\\
-\textbf{Relevant Coursework:} Database Management, Software Dev. Foundations, Data Structures and Algorithms, Calculus w/ Analytical Geometry, Statistics for Behavioral Sciences, Cyber Law and Ethics, Info Tech Project Management
+% ================= TWO-COLUMN BODY =================
+\noindent
+\begin{minipage}[t]{0.25\textwidth}
 
-% RESEARCH EXPERIENCE
-\section*{Research Experience}\vspace{-2pt}\hrule\vspace{6pt}
-\begin{tabular}{@{}p{0.17\textwidth} p{0.77\textwidth}@{}}
-\textbf{} & \textbf{Undergraduate Research Assistant,} Uof Southern Mississippi \\[1em]
+% ---- SIDEBAR CONTENT ----
+\section*{SKILLS}\vspace{-2pt}\hrule\vspace{3pt}
+{\small
+\textbf{Programming Languages}\\
+C, C++, Python \\[2pt]
+\textbf{ML \& Tools}\\
+PyTorch, Scikit-learn, NumPy, \\ Pandas, Matplotlib, Seaborn, \\ MySQL \\[2pt]
+\textbf{SWE \& IDE}\\
+Git, HTML5, CSS3, JavaScript, \\ Flask, Kivy, Jupyter, VSCode, \\ PyCharm \\[2pt]
+\textbf{Research \& Others}\\
+Qualtrics, IBM SPSS, AutoCAD
+}
 
-\textbf{Feb 2026 -- Present} & \textbf{Virtual Reality Lab}, School of Computing Sciences and Computer Engineering \\[0.2em]
-\textbf{} & \textit{Supervised by Dr. Partha Sengupta} \\[0.5em]
-\textbf{} & Working on a bifurcated project titled “VR Teaching for K-12 Students and Creating Human Resources for Agricultural Applications.” \\[2.5em]
+\vspace{8pt}
 
-\textbf{Jul 2025 -- Present} & \textbf{Experimental Health Psychology Lab}, School of Psychology \\[0.2em]
-\textbf{} & \textit{Supervised by Dr. Tammy Greer} \\[0.5em]
-& 
-\begin{minipage}[t]{0.9\linewidth}
-\begin{itemize}
-    \item Co-author manuscripts; conduct statistical analysis using SPSS
-    \item Conceptualize and lead a study on “Acculturation through AI Interventions”
-    \item Presented findings at two regional conferences
-\end{itemize}
-\end{minipage} \\[3em]
-\end{tabular}
-
-% SELECTED ONGOING RESEARCH PROJECTS
-\section*{Selected Ongoing Research Projects}\vspace{-2pt}\hrule\vspace{6pt}
-
-\begin{itemize}
-    \item Stimulating Belonging Through AI To Address Imposter Syndrome and Enhance Cultural Integration Among International Students
-    \item Locus of Control in the Virtual World: How Online Harassment Influences Consumption Behaviors
-    \item Screen Time, Attention Control, Stress, and Social Functioning: The Psychological Correlates of Smartphone Dependency in College Students
-    \item Dual Burden of Digital Dependency: Night Eating Syndrome and Body Dissatisfaction
-    \item Loneliness as a Moderator: Demographic Differences in Sugar-Sweetened Beverage (SSBs) and Mental Health
+\section*{CERTIFICATIONS (IBM)}\vspace{-2pt}\hrule\vspace{3pt}
+{\small
+\begin{itemize}[label=$\circ$, nosep, leftmargin=8pt]
+    \item Machine Learning w/ Python
+        \certlink{https://www.credly.com/badges/c16499c3-85d7-46fa-9bcc-631b162beeab}
+    \item Data Analysis with Python
+        \certlink{https://www.credly.com/badges/8689f9b1-4194-4581-a405-a62110d9c2d2}
+    \item Data Science Orientation
+        \certlink{https://www.credly.com/badges/17fa0d59-6d97-4798-9dec-3d43d8a07d8a}
+    \item Git \& GitHub Essentials
+        \certlink{https://www.credly.com/badges/4bea4907-ddd1-4abc-8be7-5b8cae71c20f}
+    \item HTML, CSS \& JavaScript
+        \certlink{https://www.credly.com/badges/e17cbcb7-30fa-4e56-bd01-9949f9c72f17}
 \end{itemize}
 
-% CONFERENCE PRESENTATIONS
-\section*{Conference Presentations}\vspace{-2pt}\hrule\vspace{6pt}
-\begin{itemize}
-    \item Akter, K., Greer, T., Slay, M., Mahjabin, N., Bainer, E., \textbf{Rashid, M. S.} (2026, March). Eating and drinking during emotional distress: How coping styles shape sugar-sweetened beverage (SSB) consumption and emotional eating. 90th Annual Meeting of the Mississippi Academy of Sciences, Biloxi, MS.
-    
-    \item Akter, K., Greer, T., Slay, M., Mahjabin, N., \textbf{Rashid, M. S.}, Ahmed, I. (2026, March). Gynecological Health Disparities and Mental Health Outcomes Among Minority Women. 72nd Annual Meeting, Southeastern Psychological Association, New Orleans, LA.
+\vspace{3pt}
+
+\section*{AWARDS \& HONORS}\vspace{-2pt}\hrule\vspace{3pt}
+{\small
+\begin{itemize}[label=$\circ$, nosep, leftmargin=8pt]
+    \item \textbf{First Place} \\--- 23rd Innovative Design \\for Computing Competition \\(IDCC), School of CSCE, 2026
+    \item \textbf{Academic Excellence Scholar} \\--- full tuition, 4 years, 2023
+    \item \textbf{President's List}
+    \item \textbf{Dean's List} x3
 \end{itemize}
+}
 
-% TECHNICAL PROJECTS
-\section*{Technical Projects}\vspace{-2pt}\hrule\vspace{6pt}
-\begin{itemize}[label=\raisebox{0.25ex}{\rule{0.7ex}{0.7ex}}]
+\vspace{3pt}
 
-    \item \textbf{PyTorch Tabular Data Classification} \textit{(Pilot Project)}
-    \faIcon{github}\link{https://github.com/MdSafwanBinRashid/ML_DL_Pilots/blob/main/PyTorch_Tabular_Data_Classification.ipynb}{[Github]}
-    \begin{itemize}[label=--, nosep]
-        \item Built and trained a feedforward neural network in PyTorch to classify rice grain types from physical measurements.
-    \end{itemize}
-
-    \vspace{8pt}
-    
-    \item \textbf{EEG Signal Processing} \textit{(Pilot Project)}
-    \faIcon{github}\link{https://github.com/MdSafwanBinRashid/Electroencephalography/blob/main/EEG_Signal_Processing.ipynb}{[Github]}
-    \begin{itemize}[label=--, nosep]
-        \item Built an MNE-Python pipeline to preprocess raw EEG data, including filtering, epoching, and artifact rejection.
-        \item Extracted and visualized P300 event-related potentials (ERPs) across stimulus conditions.
-    \end{itemize}
-
-    \vspace{8pt}
-    
-    \item \textbf{AVL Student Database} \textit{(DSA307)} 
-    \faIcon{github}\link{https://github.com/MdSafwanBinRashid/AVLStudentDB}{[Github]}
-    \begin{itemize}[label=--, nosep]
-        \item Implemented a self-balancing AVL tree in C++ to manage records with O(log n) operations.
-        \item Integrated CSV file I/O for persistent data storage between sessions.
-    \end{itemize}
-
-    \vspace{8pt}
-    
-    \item \textbf{Alumni Networking Platform V1.0} \textit{(ITC371)} 
-    \begin{itemize}[label=--, nosep]
-        \item Developed a complete project plan including scope definition, WBS, risk assessment, and resource allocation.
-        \item Designed system architecture and stakeholder communication protocols for university alumni networking.
-    \end{itemize}
-    
-    \vspace{8pt}
-    
-    \item \textbf{Immutable Criminal Record Keeping with Blockchain} \textit{(BCOLBD '23)}
-    \begin{itemize}[label=--, nosep]
-        \item Co-authored whitepaper and presented poster on Hyperledger Fabric-based secure evidence management system.
-        \item Represented Team Genesis in National Blockchain Competition.
-    \end{itemize}
+\section*{INVOLVEMENT}\vspace{-2pt}\hrule\vspace{3pt}
+{\small
+\begin{itemize}[label=$\circ$, nosep, leftmargin=8pt]
+    \item Golden Eagle Intertribal \\ Society (GEIS) at USM
+    \item Psi Chi International Honor \\ Society in Psychology
+    \item F.L.I.G.H.T. (Financial Literacy \\ Program) at USM
 \end{itemize}
+}
 
-% AWARDS & ACHIEVEMENTS
-\section*{Awards \& Achievements}\vspace{-2pt}\hrule\vspace{6pt}
-\begin{itemize}
-    \item {President's List} (Fall '25) | School of CSCE
-    \item {Dean's List} (Fall '24, Spring '25) | School of CSCE
-    \item Academic Excellence Scholar '23 (4 years)
-    \item Semi-finalist | ClimateScience Olympiad '23
-    \item {Valedictorian} (Class of '22) | Willes Little Flower School \& College
-    \item Head Boy (Letter of Commendation) | Willes Little Flower School \& College
-\end{itemize}
+\vspace{3pt}
 
-% SKILLS
-\section*{Skills}\vspace{-2pt}\hrule\vspace{6pt}
-\begin{itemize}[label=$\circ$]
-    \item \textbf{Programming Languages:} C, C++, Python
-    \item \textbf{Database:} MySQL
-    \item \textbf{Machine Learning:} PyTorch, Scikit-learn, NumPy, Pandas, Matplotlib, Seaborn
-    \item \textbf{IDE:} Colab, Jupyter Notebook, VSCode, PyCharm, Xcode, Code::Blocks
-    \item \textbf{SWE:} Git, HTML5, CSS3, JavaScript
-    \item \textbf{Research:} Qualtrics, IBM SPSS
-    \item \textbf{Others:} Competitive Programming, AutoCAD
-\end{itemize}
+\section*{LANGUAGES}\vspace{-2pt}\hrule\vspace{3pt}
+{\small
+English (Advanced) \\
+French (Intermediate) \\
+Urdu (Conversational) \\
+Bengali (Native)
+}
 
-% JOB EXPERIENCE
-\section*{Job Experience}\vspace{-2pt}\hrule\vspace{6pt}
-\begin{tabular}{@{}p{0.18\textwidth} p{0.9\textwidth}@{}}
+\vspace{3pt}
 
-\textbf{Aug 2024 -- Present} & \textbf{Campus Dining Crew, } Aramark Campus LLC, Hattiesburg, MS \\[0.3em]
-& Managing cafeteria operations; assisting with catering for campus events.\\[1em]
-
-\textbf{Jul 2022 -- Jun 2023} & \textbf{Junior Executive, } Energypac Power Generation PLC, Dhaka, BD \\[0.3em]
-& 
-\begin{minipage}[t]{0.9\linewidth}
-\begin{itemize}
-    \item Secured a year-long role at Energypac, a leading power engineering firm in Bangladesh
-    \item Managed FIFO inventory system
-    \item Optimized logistics plans to streamline supply chain operations for large-scale projects
-\end{itemize}
-\end{minipage} \\[1em]
-
-\end{tabular}
-
-% INVOLVEMENT
-\section*{Involvements}\vspace{-2pt}\hrule\vspace{6pt}
-\begin{itemize}
-    \item \textbf{Chapter Member} | Psi Chi International Honor Society in Psychology \hfill Apr 2026 -- Present
-    \item \textbf{Event Coordinator} | Bangladeshi Student Association (BSA) \hfill Aug 2024 -- May 2025
-    \item \textbf{Volunteer} | Purnota Foundation \hfill Feb 2024 -- Present
-    \item \textbf{French Instructor} | DPT Foreign Language Club | DP Tutorials \hfill Jun 2023 -- Mar 2024
-\end{itemize}
-
-% LANGUAGE
-\section*{Language}\vspace{-2pt}\hrule\vspace{6pt}
-English (C2), French (B1), Urdu (B1), Bengali (Native)
-
-% REFERENCES
-\section*{References}\vspace{-2pt}\hrule\vspace{6pt}
+\section*{REFERENCES}\vspace{-2pt}\hrule\vspace{6pt}
 
 \noindent
-\begin{minipage}[t]{0.45\textwidth}
-    \textbf{Dr. Partha Sengupta} \\
-    Assistant Professor \\
-    School of Computing Sciences and \\
-    Computer Engineering \\
-    The University of Southern Mississippi \\
-    Contact: \href{mailto:Partha.Sengupta@usm.edu}{Partha.Sengupta@usm.edu}
+\textbf{Dr. Partha Sengupta} \\
+Assistant Professor, \\
+School of CSCE \\
+\href{mailto:Partha.Sengupta@usm.edu}{Partha.Sengupta@usm.edu}
+
+\vspace{6pt}
+
+\noindent
+\textbf{Dr. Tammy Greer} \\
+Associate Professor, \\
+School of Psychology \\
+\href{mailto:Tammy.Greer@usm.edu}{Tammy.Greer@usm.edu}
+
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.45\textwidth}
-    \textbf{Dr. Tammy Greer} \\
-    Associate Professor \\
-    School of Psychology \\
-    The University of Southern Mississippi \\
-    Contact: \href{mailto:Tammy.Greer@usm.edu}{Tammy.Greer@usm.edu}
-\end{minipage} \\
+\begin{minipage}[t]{0.72\textwidth}
+\vspace{0pt}
 
-\noindent\textit{More References available upon request.}
+% ---- MAIN COLUMN ----
+\section*{EDUCATION}\vspace{-2pt}\hrule\vspace{6pt}
+\textbf{The University of Southern Mississippi} \hfill Aug 2024 -- May 2028\\
+B.S. in Computer Science, Minor in Psychology \hfill CGPA: 3.89\\
+\textit{Relevant Coursework:} Database Management, Software Development, Data Structures \& Algorithms, Calculus w/ Analytical Geometry, Operating Systems, Info Tech Proj. Management
+
+\vspace{6pt}
+
+% ============ PROJECTS ============
+\section*{TECHNICAL PROJECTS}\vspace{-2pt}\hrule\vspace{6pt}
+\begin{itemize}[label=\raisebox{0.25ex}{\rule{0.65ex}{0.65ex}}]
+
+    \item \textbf{Lab Websites} \textit{(Web Development, Wix)} \hfill
+        \urllink{https://virtualrealitylabusm.wixsite.com/virtual-reality-lab} \textbar{} \urllink{https://psychologylabusm.wixsite.com/experimental-health}
+    \begin{itemize}[label=--, nosep]
+        \item Designed and built the official websites for two research labs at USM.
+        \item Structured site content and maintained consistent design and presentation across all pages.
+    \end{itemize}
+
+    \vspace{7pt}
+
+    \item \textbf{Best Buy Retail Database System} \textit{(MySQL, Flask, Python, HTML5, CSS3)} \hfill
+        \ghlink{https://github.com/MdSafwanBinRashid/Retailer_Enterprise_Database_System_BestBuyModel/tree/main}
+    \begin{itemize}[label=--, nosep]
+        \item Designed a normalized relational database for a consumer electronics retailer.
+        \item Implemented concurrent transactions, low-stock triggers, and a UI with role-based access.
+    \end{itemize}
+
+    \vspace{7pt}
+
+    \item \textbf{College Life App} \textit{(Python, Kivy)} \hfill
+        \ghlink{https://github.com/MdSafwanBinRashid/College_Life_App_KivyPy}
+    \begin{itemize}[label=--, nosep]
+        \item Developed a cross-platform academic task-management app with Kivy and a modular UI.
+        \item Built JSON-based local storage and a custom, responsive interface.
+    \end{itemize}
+
+    \vspace{7pt}
+
+    \item \textbf{AVL Student Database} \textit{(C++, C)} \hfill
+        \ghlink{https://github.com/MdSafwanBinRashid/AVLStudentDB}
+    \begin{itemize}[label=--, nosep]
+        \item Implemented a self-balancing AVL tree with \(O(\log n)\) insert/delete/search for student records.
+        \item Integrated CSV I/O to load and persist student records between sessions.
+    \end{itemize}
+
+\end{itemize}
+
+\vspace{4pt}
+
+% ============ PROFESSIONAL EXPERIENCE ============
+\section*{PROFESSIONAL EXPERIENCE}\vspace{-2pt}\hrule\vspace{6pt}
+
+\textbf{Learning Assistant} --- Southern Miss Center for Faculty Development \hfill Aug 2026 -- Present
+\begin{itemize}[label=--, nosep]
+    \item Facilitate learning for Statistics in the Behavioral Sciences (PSY 360) through in-class assistance
+    \item Proctor and grade exams, manage Canvas, and hold office hour
+\end{itemize}
+
+\vspace{7pt}
+
+\textbf{Junior Executive} --- Energypac Power Generation PLC, Dhaka, BD \hfill Jul 2022 -- Jun 2023
+\begin{itemize}[label=--, nosep]
+    \item Reduced inventory discrepancies through systematic reconciliation and audit tracking
+    \item Assisted in refining logistics plans to improve supply chain coordination
+\end{itemize}
+
+\vspace{4pt}
+
+% ============ RESEARCH ============
+\section*{RESEARCH EXPERIENCE}\vspace{-2pt}\hrule\vspace{6pt}
+\textbf{Virtual Reality Lab, School of CSCE} --- \textit{Dr. Partha Sengupta} \hfill Feb 2026 -- Present
+\begin{itemize}[label=--, nosep]
+    \item Contribute to research on VR in K-12 STEM education and precision agriculture.
+    \item Presented our project at the NASA-Mississippi Space Grant Consortium sponsored 23rd Innovative Design for Computing Competition (IDCC’26) and won First Place
+\end{itemize}
+
+\vspace{7pt}
+
+\textbf{Experimental Health Psych Lab, School of Psychology} --- \textit{Dr. Tammy Greer} \hfill Jul 2025 -- Present
+\begin{itemize}[label=--, nosep]
+    \item Co-author manuscripts and conduct statistical analysis of collected data using SPSS.
+    \item Lead a study examining mood dynamics as digital markers of depression severity
+    \item Presented findings at two regional conferences.
+\end{itemize}
+
+\vspace{4pt}
+
+% ============ FORTHCOMING CONFERENCE PUBLICATION ============
+\section*{FORTHCOMING CONFERENCE PUBLICATION}\vspace{-2pt}\hrule\vspace{6pt}
+\begin{itemize}
+    \item Patrick, A., Khadka, M., Jridi, B., Turan, M.T., \textbf{Rashid, M.S.B.}, Sengupta, P., et al. (2026). \textit{Synthetic Data Generation and CNN-Based Analysis for Precision Agriculture Using Drone Imagery.} Proc. 35th Int'l Conf. on Software Engineering and Data Engineering, San Francisco, CA, USA.
+\end{itemize}
+
+\vspace{4pt}
+
+% ============ CONFERENCE PRESENTATIONS ============
+\section*{CONFERENCE PRESENTATIONS}\vspace{-2pt}\hrule\vspace{6pt}
+\begin{itemize}
+    \item Akter, K., Greer, T., \textbf{Rashid, M.S.B.}, et al. (2026). \textit{Dual Burden of Digital Dependency: Night Eating and Body Dissatisfaction.} Dr. Lynn Cook Hartwig Public Health Symposium, Hattiesburg, MS.
+    \item Akter, K., Greer, T., Slay, M., Mahjabin, N., \textbf{Rashid, M.S.B.}, et al. (2026). \textit{Eating and Drinking During Emotional Distress: How Coping Styles Shape Sugar Sweetened Beverage Consumption and Emotional Eating.} 90th Annual Meeting of the Mississippi Academy of Sciences, Biloxi, MS. [Oral]
+\end{itemize}
+
+\end{minipage}
 
 \end{document}
