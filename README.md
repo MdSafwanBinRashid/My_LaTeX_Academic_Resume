@@ -1,6 +1,6 @@
-### My_LaTeX_Academic_CV
+### My_LaTeX_Academic_Resume
 
-This is my actual CV created in LaTeX. Feel free to use the format/layout as a template for yours.
+This is my actual Resume created in LaTeX. Feel free to use the format/layout as a template for yours.
 
 - `main.tex` - Full LaTeX source code
 
